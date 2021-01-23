@@ -293,6 +293,7 @@ def lose():
 
 
 if __name__ == '__main__':
+    os.environ['SDL_VIDEO_CENTERED'] = '1'
     pygame.init()
     pygame.mixer.music.load("data/music_fon.mp3")
     pygame.mixer.music.play(-1)
