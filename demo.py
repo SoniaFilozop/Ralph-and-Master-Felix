@@ -100,8 +100,6 @@ class Kirpich(pygame.sprite.Sprite):
     image = load_image("kirpich.png")
 
     def __init__(self, group):
-        # НЕОБХОДИМО вызвать конструктор родительского класса Sprite.
-        # Это очень важно !!!
         super().__init__(group)
         self.image = Kirpich.image
         self.rect = self.image.get_rect()
@@ -119,8 +117,6 @@ class Ochki(pygame.sprite.Sprite):
     image = load_image("och.png")
 
     def __init__(self, group):
-        # НЕОБХОДИМО вызвать конструктор родительского класса Sprite.
-        # Это очень важно !!!
         super().__init__(group)
         self.image = Ochki.image
         self.rect = self.image.get_rect()
