@@ -42,22 +42,13 @@ class Tile(pygame.sprite.Sprite):
         super().__init__(tiles_group, all_sprites)
         self.image = tile_images[tile_type]
         self.rect = self.image.get_rect().move(
-            tile_width * pos_x, tile_height * pos_y)
+            int(tile_width * pos_x), int(tile_height * pos_y))
         tiles.append(self)
 
 
 def updates_tiles(number):
     global tiles
     tiles[number].image = load_image("window1.png")
-
-
-class Player(pygame.sprite.Sprite):
-    def __init__(self):
-        pygame.sprite.Sprite.__init__(self)
-        self.image = load_image("f.png")
-        self.image.set_colorkey((0, 0, 0))
-        self.rect = self.image.get_rect()
-        self.rect.center = (195, 340)
 
 
 def generate_level(level):
